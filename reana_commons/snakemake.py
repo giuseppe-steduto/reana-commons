@@ -93,7 +93,7 @@ def snakemake_load(workflow_file: str, **kwargs: Any) -> Dict:
         if workdir:
             workflow.workdir(workdir)
 
-        workflow.include(snakefile=snakefile, overwrite_first_rule=True)
+        workflow.include(snakefile=snakefile, overwrite_default_target=False)
         workflow.check()
 
         # code copied and adapted from `snakemake.workflow.Workflow.execute()`
@@ -122,7 +122,9 @@ def snakemake_load(workflow_file: str, **kwargs: Any) -> Dict:
 
         if not kwargs.get("targets"):
             targets = (
-                [workflow.first_rule] if workflow.first_rule is not None else list()
+                [workflow.default_target]
+                if workflow.default_target is not None
+                else list()
             )
 
         prioritytargets = kwargs.get("prioritytargets", [])
@@ -157,7 +159,7 @@ def snakemake_load(workflow_file: str, **kwargs: Any) -> Dict:
             omitrules=omitrules,
         )
 
-        workflow.persistence = Persistence(dag=dag)
+        workflow._persistence = Persistence(dag=dag)
         dag.init()
         dag.update_checkpoint_dependencies()
         dag.check_dynamic()

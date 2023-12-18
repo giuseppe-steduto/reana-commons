@@ -35,13 +35,11 @@ extras_require = {
     "yadage": ["adage~=0.10.1", "yadage~=0.20.1", "yadage-schemas~=0.10.6"],
     "cwl": ["cwltool==3.1.20210628163208"],
     "snakemake": [
-        "snakemake==6.8.0 ; python_version<'3.12'",
-        "snakemake==7.9.0 ; python_version>='3.12'",
+        "snakemake==7.32.4",
         "tabulate<0.9",
     ],
     "snakemake_reports": [
-        "snakemake[reports]==6.8.0 ; python_version<'3.12'",
-        "snakemake[reports]==7.9.0 ; python_version>='3.12'",
+        "snakemake==7.32.4",
         "pygraphviz<1.8",
         "tabulate<0.9",  # tabulate 0.9 crashes snakemake, more info: https://github.com/snakemake/snakemake/issues/1899
     ],
