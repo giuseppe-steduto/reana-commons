@@ -1,5 +1,64 @@
 # Changelog
 
+## [0.9.8](https://github.com/giuseppe-steduto/reana-commons/compare/v0.9.7...0.9.8) (2024-02-23)
+
+
+### Build
+
+* **snakemake:** require pulp&lt;2.8.0 ([#444](https://github.com/giuseppe-steduto/reana-commons/issues/444)) ([5daa109](https://github.com/giuseppe-steduto/reana-commons/commit/5daa109a58066126c2d8a35e7cd7da70d4137f62))
+
+
+### Features
+
+* **config:** allow customisation of runtime group name ([#440](https://github.com/giuseppe-steduto/reana-commons/issues/440)) ([5cec305](https://github.com/giuseppe-steduto/reana-commons/commit/5cec30561ba21e2ea695e20eaea8171226f06e52))
+* **snakemake:** upgrade to Snakemake 7.32.4 ([#435](https://github.com/giuseppe-steduto/reana-commons/issues/435)) ([20ae9ce](https://github.com/giuseppe-steduto/reana-commons/commit/20ae9cebf19a1fdb77ad08956db04ef026521b5d))
+
+
+### Bug fixes
+
+* **cache:** handle deleted files when calculating access times ([#437](https://github.com/giuseppe-steduto/reana-commons/issues/437)) ([698900f](https://github.com/giuseppe-steduto/reana-commons/commit/698900fc63e20bd54dcc4a5faa6cac0be5d0d8de))
+
+
+### Code refactoring
+
+* **docs:** move from reST to Markdown ([#441](https://github.com/giuseppe-steduto/reana-commons/issues/441)) ([36ce4e0](https://github.com/giuseppe-steduto/reana-commons/commit/36ce4e0a86484e3a7006e20545a892424ce0f3a2))
+
+
+### Test suite
+
+* fix calculate hash test ([95a719b](https://github.com/giuseppe-steduto/reana-commons/commit/95a719b6bb67b7d981860018e0a8c509a8d1d54e))
+
+
+### Continuous integration
+
+* added flake8 linter ([a48dcd8](https://github.com/giuseppe-steduto/reana-commons/commit/a48dcd8d7b9260b8ddb973747f43104e9685bee3))
+* added github actions workflow ([80b4c2a](https://github.com/giuseppe-steduto/reana-commons/commit/80b4c2a3b4bc583073f2e6385d8aa3800ce8507d))
+* added python 2.7 to github action python test strategy ([5b8c024](https://github.com/giuseppe-steduto/reana-commons/commit/5b8c0246fe874290576a2738def2a44080e72112)), closes [#233](https://github.com/giuseppe-steduto/reana-commons/issues/233)
+* **commitlint:** addition of commit message linter ([#432](https://github.com/giuseppe-steduto/reana-commons/issues/432)) ([a67906f](https://github.com/giuseppe-steduto/reana-commons/commit/a67906fe8620e1f624e24e8a4511694a9b60378d))
+* **commitlint:** check for the presence of concrete PR number ([#438](https://github.com/giuseppe-steduto/reana-commons/issues/438)) ([d3035dc](https://github.com/giuseppe-steduto/reana-commons/commit/d3035dc12cecf16edcbec462dfdb1386da16f6d6))
+* pin ubuntu version in GA jobs ([cbfc143](https://github.com/giuseppe-steduto/reana-commons/commit/cbfc143f1f32a7b88b6d180ca7a991b56d1b6ebe))
+* **release-please:** initial configuration ([#432](https://github.com/giuseppe-steduto/reana-commons/issues/432)) ([687f2f4](https://github.com/giuseppe-steduto/reana-commons/commit/687f2f4ea8c5c49a70c6f121faf7e59a98dd3138))
+* removed pip upgrade ([efe654b](https://github.com/giuseppe-steduto/reana-commons/commit/efe654b566e7c4110c91762e6cc1b2ac43e90581))
+* **shellcheck:** check all shell scripts recursively ([#436](https://github.com/giuseppe-steduto/reana-commons/issues/436)) ([709a685](https://github.com/giuseppe-steduto/reana-commons/commit/709a685b3a8586b069a98c0338283a6bd2721005))
+* **shellcheck:** fix exit code propagation ([#438](https://github.com/giuseppe-steduto/reana-commons/issues/438)) ([85d9a2a](https://github.com/giuseppe-steduto/reana-commons/commit/85d9a2a68e3929f442e03d5422a37ffd6b7169c6))
+* update all actions ([dd3d0ba](https://github.com/giuseppe-steduto/reana-commons/commit/dd3d0bab733071136ff0cdfdd54e36e2f5788b9d))
+* use Python 3.12 stable release ([e49b0c7](https://github.com/giuseppe-steduto/reana-commons/commit/e49b0c7fdd5b7428b359c946d468bbdff10d7b14))
+
+
+### Documentation
+
+* add .readthedocs.yaml to migrate to RTD v2 ([6682140](https://github.com/giuseppe-steduto/reana-commons/commit/66821403d8b40a8929677b988c5a4262a13574e5))
+* **authors:** complete list of contributors ([#442](https://github.com/giuseppe-steduto/reana-commons/issues/442)) ([4a74c10](https://github.com/giuseppe-steduto/reana-commons/commit/4a74c10e7a248f580778ebc772bffe94e533e7ed))
+* fix docstrings for kombu class references ([8af0606](https://github.com/giuseppe-steduto/reana-commons/commit/8af06066687207d334562e70a6abe146e4c79427))
+* fix docstrings for kombu class references ([8c20f2e](https://github.com/giuseppe-steduto/reana-commons/commit/8c20f2e75c5e9da9e65450244c387b0f8d57121c))
+* install only docs required dependencies for RTD build ([77e0d9f](https://github.com/giuseppe-steduto/reana-commons/commit/77e0d9f0d095d19b8dfe3ed8a1970a5733e85907)), closes [#210](https://github.com/giuseppe-steduto/reana-commons/issues/210)
+* remove reana-cluster references ([f558c06](https://github.com/giuseppe-steduto/reana-commons/commit/f558c0603b086a84995ced122fd99d05852679bb))
+* set default language to English ([0247a25](https://github.com/giuseppe-steduto/reana-commons/commit/0247a25d9744f07c530459017c45fe9ab7bc9e99))
+* single-page RTFD outline ([e387aba](https://github.com/giuseppe-steduto/reana-commons/commit/e387aba8524298ad99e87612cd9cd7dd3e71f147))
+* switch to stable version of kombu ([daf272e](https://github.com/giuseppe-steduto/reana-commons/commit/daf272ec5f3a2f91220f9318be546ba4d542024d))
+* switch to stable version of kombu ([12a44e2](https://github.com/giuseppe-steduto/reana-commons/commit/12a44e23cae0f8802cd243c06d4d50f289bd9360))
+* update changelog ([f79147a](https://github.com/giuseppe-steduto/reana-commons/commit/f79147a060c1ef7d02b6857fef9579d72ced6414))
+
 ## [0.9.7](https://github.com/reanahub/reana-commons/compare/0.9.6...0.9.7) (2024-02-20)
 
 
